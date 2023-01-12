@@ -75,12 +75,11 @@ function buildSubject({
     let ticketTag = "[sc-" + ticketId + "]";
     output = output.replace(
       ticketTag,
-      "[" +
-        ticketTag +
-        "]" +
-        "(https://app.shortcut.com/workera/story/" +
+      "<a href='https://app.shortcut.com/workera/story/" +
         ticketId +
-        ")"
+        "'>" +
+        ticketTag +
+        " target='_blank' </a>"
     );
   }
   return {
