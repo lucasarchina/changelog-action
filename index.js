@@ -153,7 +153,9 @@ async function main() {
     }
 
     if (latestTag.name !== tag) {
-      return core.setFailed(`Provided tag doesn\'t match latest tag ${tag}.`);
+      return core.setFailed(
+        `Provided tag doesn\'t match latest tag ${tag}. Latest tag: ${latestTag.name}`
+      );
     }
 
     core.info(`Using latest tag: ${latestTag.name}`);
